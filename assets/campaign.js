@@ -13,7 +13,7 @@
     'yusulhwa','yeonmuyeong','namharyeong','cheonyeongbaek','al1',
     'edgar','mascot'
   ];
-  const introAssetPath = new URL('assets/img/intro/', document.baseURI).href;
+  const introAssetPath = new URL('img/intro/', document.currentScript.src).href;
   const montageGuests = compactViewport ? guests.filter((_, index) => index % 2 === 0) : guests;
   let introDone = false;
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));

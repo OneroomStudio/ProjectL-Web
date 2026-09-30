@@ -3,14 +3,95 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>프로젝트 마키나 다운로드</title>
-  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#080d18">
+  <meta name="google-site-verification" content="Ud0TVq6FxoQUJIldXih3fmodZwzruPx28qauhJHwj6c">
+  <title>프로젝트 마키나 | 지금 플레이</title>
+  <meta name="description" content="연구소의 문이 열린다. 수집형 방치형 RPG 프로젝트 마키나를 Google Play에서 만나보세요. iOS 출시 알림 사전예약 접수 중.">
+  <meta property="og:title" content="프로젝트 마키나 | 지금 플레이">
+  <meta property="og:description" content="연구소의 문이 열린다. 지금 프로젝트 마키나의 세계로.">
+  <meta property="og:image" content="https://www.orstudios.net/assets/img/market-1.jpg">
+  <link rel="icon" href="../assets/img/logo-machina.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="../assets/img/Lobby_01_pin_fhd_2.png">
+  <link rel="preload" as="image" href="../assets/img/intro/player_male_illust.webp">
+  <link rel="stylesheet" href="../assets/campaign.css">
   <script>
-    const android = /Android/i.test(navigator.userAgent) && !/Windows Phone/i.test(navigator.userAgent);
-    const fromSite = document.referrer.startsWith(location.origin);
-    if (android && !fromSite) location.replace('https://play.google.com/store/apps/details?id=com.orstudio.Pmachina&pcampaignid=web_share');
-    else location.replace('../#download');
+    // 외부 공유 링크로 들어온 Android 기기는 스토어로 바로 보낸다 (사이트 안에서 들어오면 페이지를 보여줌).
+    if (/Android/i.test(navigator.userAgent) && !/Windows Phone/i.test(navigator.userAgent) && !document.referrer.startsWith(location.origin))
+      location.replace('https://play.google.com/store/apps/details?id=com.orstudio.Pmachina&pcampaignid=web_share');
   </script>
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="../assets/campaign.js" defer></script>
 </head>
-<body><p><a href="../#download">프로젝트 마키나 다운로드 및 iOS 사전예약</a></p></body>
+<body>
+  <a class="skip-link" href="#download">다운로드로 바로 가기</a>
+  <div class="site-shell">
+    <main>
+      <section class="scene" aria-label="프로젝트 마키나 연구소">
+        <div class="scene-bg" aria-hidden="true"></div>
+        <div class="scene-vignette" aria-hidden="true"></div>
+        <div class="scene-rays" aria-hidden="true"></div>
+        <div class="scene-flash" aria-hidden="true"></div>
+        <div class="characters" aria-hidden="true">
+          <img class="character character-player" src="../assets/img/intro/player_male_illust.webp" alt="">
+          <div class="character-guest" id="character-guest"></div>
+        </div>
+        <div class="doors" aria-hidden="true">
+          <div class="door door-left"><img src="../assets/img/L_door.png" alt=""></div>
+          <div class="door door-right"><img src="../assets/img/R_door.png" alt=""></div>
+          <div class="door-seam"></div>
+        </div>
+        <div class="door-frame" aria-hidden="true"><img src="../assets/img/doorframe.png" alt=""></div>
+        <div class="intro-ui">
+          <span class="intro-code">MACHINA LAB <i></i> ACCESS / 001</span>
+          <span class="intro-status" id="intro-status">보안 게이트 개방 중</span>
+        </div>
+        <div class="scene-content" id="download">
+          <p class="scene-overline">ONE ROOM STUDIO PRESENTS <span></span> COLLECT &amp; IDLE RPG</p>
+          <h1 class="brand"><img src="../assets/img/logo-machina.webp" alt="PROJECT MACHINA · 프로젝트 마키나" width="1920" height="458"></h1>
+          <p class="brand-tagline">이야기 속 주인공들과의 만남</p>
+          <div class="market-panel" aria-label="프로젝트 마키나 게임 소개 이미지">
+            <div class="market-window" id="market-window">
+              <img class="market-slide active" src="../assets/img/market-1.jpg" alt="프로젝트 마키나 전투와 자동 연구" fetchpriority="high">
+              <img class="market-slide" src="../assets/img/market-2.jpg" alt="다양한 보스에 도전하는 프로젝트 마키나" loading="lazy">
+              <img class="market-slide" src="../assets/img/market-3.jpg" alt="리미트 테스트, 코어 분석, 코어 디펜스" loading="lazy">
+              <img class="market-slide" src="../assets/img/market-4.jpg" alt="마키나 성장과 장비 시스템" loading="lazy">
+              <img class="market-slide" src="../assets/img/market-5.jpg" alt="스토리와 캐릭터를 만나는 프로젝트 마키나" loading="lazy">
+              <img class="market-slide" src="../assets/img/market-6.jpg" alt="다양한 동료와 함께하는 프로젝트 마키나" loading="lazy">
+            </div>
+            <div class="market-controls">
+              <span class="panel-label">EXPERIMENT RECORD <b id="slide-number">01</b> / 06</span>
+              <div class="market-dots" aria-label="배너 선택"></div>
+              <div class="market-arrows"><button type="button" id="slide-prev" aria-label="이전 배너">←</button><button type="button" id="slide-next" aria-label="다음 배너">→</button></div>
+            </div>
+            <div class="market-timer" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="store-actions">
+            <a class="store-button android" href="https://play.google.com/store/apps/details?id=com.orstudio.Pmachina&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Z"/><path fill="#fbbc04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.8-.5.8-1.9 0-2.4l-3.8-2.2Z"/><path fill="#4285f4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4L3.6 1.8Z"/><path fill="#ea4335" d="m13.8 12 3.4 3.4-12.4 6.8c-.4.2-.9.2-1.2 0L13.8 12Z"/></svg>
+              <span><small>지금 플레이</small><strong>Google Play</strong></span><b aria-hidden="true">↗</b>
+            </a>
+            <button class="store-button ios" type="button" id="ios-toggle" aria-expanded="false" aria-controls="ios-reservation">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.8 1.2 1.8 2.6 3.1 2.6 1.3-.1 1.7-.8 3.3-.8 1.5 0 1.9.8 3.3.8 1.4 0 2.2-1.3 3-2.5 1-1.4 1.3-2.7 1.4-2.8-.1 0-2.6-1-2.4-4.2ZM13.9 5.1c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4Z"/></svg>
+              <span><small>10월 중 오픈 예정</small><strong>iOS 사전예약</strong></span><b aria-hidden="true">⌄</b>
+            </button>
+          </div>
+          <div class="reservation" id="ios-reservation" hidden>
+            <form id="ios-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfv54ZTvAfOYo8kwQytRsmWUeG_VRS2t_Kp4L-P0YA4iBBMJg/formResponse" method="POST">
+              <div class="reservation-heading"><div><span class="small-label">IOS / EARLY ACCESS</span><h2>출시 알림 사전예약</h2></div><p>앱스토어 오픈 소식을 이메일로 알려드립니다.</p></div>
+              <div class="email-row"><label for="reservation-email" class="sr-only">이메일 주소</label><input id="reservation-email" type="email" name="entry.1000022" placeholder="이메일 주소를 입력하세요" autocomplete="email" required><button type="submit">사전예약 신청 <span aria-hidden="true">↗</span></button></div>
+              <label class="consent"><input type="checkbox" name="entry.846997345" value="개인정보 처리 방침 이용 동의" required><span>[필수] <a href="../more/개인정보-처리-방침/" target="_blank" rel="noopener noreferrer">개인정보 처리 방침</a> 이용 동의</span></label>
+              <label class="consent"><input type="checkbox" name="entry.825085978" value="서비스 이용 약관 동의" required><span>[필수] <a href="../more/서비스-이용약관/" target="_blank" rel="noopener noreferrer">서비스 이용 약관</a> 이용 동의</span></label>
+              <details class="terms"><summary>개인정보 수집·이용 내용 보기</summary><ul><li>수집 항목: 이메일</li><li>수집 목적: 프로젝트 마키나 iOS 출시 소식 이메일 발송</li><li>보유 기간: 출시 안내 발송 후 지체 없이 파기 (동의 철회 시 즉시 파기)</li><li>동의를 거부할 수 있으며, 거부 시 사전예약 및 출시 안내를 받을 수 없습니다.</li><li>동의 철회 문의: <a href="mailto:management1423@orstudios.net">management1423@orstudios.net</a></li></ul></details>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>© ONEROOM STUDIO · PROJECT MACHINA</span><div><a href="../more/서비스-이용약관/">서비스 이용약관</a><a href="../more/개인정보-처리-방침/">개인정보 처리 방침</a><a href="mailto:management1423@orstudios.net">문의</a></div></footer>
+  </div>
+</body>
 </html>
